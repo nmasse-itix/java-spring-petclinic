@@ -96,3 +96,12 @@ commands:
       group:
         kind: run
         isDefault: true
+
+  - id: add-artifactory-repo
+    exec:
+      component: tools
+      workingDir: ${PROJECT_SOURCE}
+      commandLine: /usr/local/bin/add-artifactory-repo
+      group:
+        kind: build
+        isDefault: false
