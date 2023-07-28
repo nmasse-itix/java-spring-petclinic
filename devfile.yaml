@@ -19,6 +19,9 @@ components:
       volumeMounts:
         - name: m2
           path: /home/user/.m2
+      env:
+        - name: USE_JAVA17
+          value: "true"
 
   - name: m2
     volume:
