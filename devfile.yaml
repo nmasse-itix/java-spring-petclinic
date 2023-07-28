@@ -2,7 +2,6 @@ schemaVersion: 2.1.0
 metadata:
   name: spring-petclinic
 components:
-
   - name: tools
     container:
       image: image-registry.openshift-image-registry.svc:5000/udi/udi-custom:latest
@@ -21,6 +20,9 @@ components:
           path: /home/user/.m2
       memoryLimit: 4G
       cpuLimit: 4000m
+      env:
+        - name: USE_JAVA17
+          value: "true"
 
   - name: m2
     volume:
