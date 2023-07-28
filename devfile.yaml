@@ -5,6 +5,8 @@ attributes:
   pod-overrides: {"spec":{"runtimeClassName":"kata"}}
 components:
   - name: tools
+    attributes:
+      container-overrides: {"securityContext":{"privileged":true}}
     container:
       image: image-registry.openshift-image-registry.svc:5000/udi/udi-custom:latest
       memoryLimit: 3Gi
